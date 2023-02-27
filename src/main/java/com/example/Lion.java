@@ -16,13 +16,18 @@ public class Lion {
         }
     }
 
-    Feline feline = new Feline();
-
+    //Feline feline = new Feline();
+    Feline feline;
+    public Lion (String sex, Feline feline){
+        this.feline=feline;
+    }
     public int getKittens() {
+
         return feline.getKittens();
     }
 
     public boolean doesHaveMane() {
+
         return hasMane;
     }
 
