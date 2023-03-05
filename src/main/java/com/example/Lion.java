@@ -1,11 +1,14 @@
 package com.example;
-
 import java.util.List;
 
 public class Lion {
-
+    private String sex;
+    private Feline feline;
     boolean hasMane;
-
+    public Lion (String sex, Feline feline){
+        this.feline=feline;
+        this.sex=sex;
+    }
     public Lion(String sex) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;
@@ -16,11 +19,6 @@ public class Lion {
         }
     }
 
-    //Feline feline = new Feline();
-    Feline feline;
-    public Lion (String sex, Feline feline){
-        this.feline=feline;
-    }
     public int getKittens() {
 
         return feline.getKittens();

@@ -1,4 +1,3 @@
-import com.example.Cat;
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
@@ -27,6 +26,11 @@ public class LionTest {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
+    }
+
+    @Test(expected = Exception.class)
+    public void negativeCheckOfHaveMane() throws Exception {
+        Lion lion=new Lion("выброс исключения");
     }
 
 }

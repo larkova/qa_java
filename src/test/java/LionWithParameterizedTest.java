@@ -29,11 +29,6 @@ public class LionWithParameterizedTest {
         boolean actual= lion.doesHaveMane();
         assertEquals(result, actual);
     }
-    @Test(expected = Exception.class)
-    public void negativeCheckOfHaveMane() throws Exception {
-        Lion lion=new Lion("выброс исключения");
-    }
-
 
 }
 
