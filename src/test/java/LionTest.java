@@ -15,7 +15,7 @@ public class LionTest {
     @Mock
     Feline feline;
     @Test
-    public void getKittensReturnTwo() {
+    public void getKittensReturnTwo() throws Exception {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(2);
         assertEquals(2, lion.getKittens());
@@ -30,7 +30,7 @@ public class LionTest {
 
     @Test(expected = Exception.class)
     public void negativeCheckOfHaveMane() throws Exception {
-        Lion lion=new Lion("выброс исключения");
+        Lion lion=new Lion("выброс исключения", feline);
     }
 
 }
